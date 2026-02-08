@@ -1,19 +1,21 @@
 package gov.gestaoferias.gestaoferias.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Entity
-public class User extends Person{
+@Table(name = "user_table")
+public class Users extends Person{
 
     private String userName;
     private String password;
     private UserType userType;
     private StatusUser status;
 
-    public User(){
+    public Users(){
     }
 
-    public User(String fullName, String cpf, String department, String userName, String password, UserType userType, StatusUser status) {
+    public Users(String fullName, String cpf, String department, String userName, String password, UserType userType, StatusUser status) {
         super(fullName, cpf, department);
         this.userName = userName;
         this.password = password;
