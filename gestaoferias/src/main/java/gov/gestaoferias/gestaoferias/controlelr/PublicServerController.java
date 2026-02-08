@@ -4,6 +4,7 @@ import gov.gestaoferias.gestaoferias.dto.PublicServerDto;
 import gov.gestaoferias.gestaoferias.model.PublicServer;
 import gov.gestaoferias.gestaoferias.model.Vacation;
 import gov.gestaoferias.gestaoferias.service.PublicServerService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,8 +19,7 @@ public class PublicServerController {
     }
 
     @PostMapping
-    public String registerPublicServer(@RequestBody PublicServerDto publicServerDto){
-        System.out.print(publicServerDto.toString());
-        return publicServerDto.toString();
+    public ResponseEntity<?> registerPublicServer(@RequestBody PublicServerDto publicServerDto){
+        return publicServerService.registerPublicServer(publicServerDto);
     }
 }
