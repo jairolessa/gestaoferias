@@ -89,4 +89,18 @@ public class PublicServerDto {
     public void setStatus(StatusServer status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "PublicServerDto{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", department='" + department + '\'' +
+                ", registration='" + registration + '\'' +
+                ", role='" + role + '\'' +
+                ", specialty='" + specialty + '\'' +
+                ", status=" + status +
+                '}';
+    }
 }
